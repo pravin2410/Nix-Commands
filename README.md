@@ -107,8 +107,8 @@ e)If you have enabled a firewall on your system, configure it to allow incoming 
 
 For example, the following command configures iptables to allow incoming HTTP connection requests and saves the change to the firewall configuration:
 
-# iptables -I INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT
-# service iptables save
+iptables -I INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT
+service iptables save
 
 Once http is installed on linux then we can install MySQl.
 
