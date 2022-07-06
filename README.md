@@ -8,28 +8,22 @@ b)cat /proc/meminfo will show you free available memory in server
 
 we will use nginx -s reload command for auto updating file in /etc/nginx/sites-enabled/ directory
 
-3. You are closely working with a developer to catch an error in the api call, so you are asked to monitor real time access logs of nginx webserver, this log file has a huge amount of data which you cannot risk to open all at once which might take time. Assuming recent data gets appended in the access log file, write your step to check the real time logs.
-Answer : a)first, we need to install ngxtop using command $ sudo pip install ngxtop
+3.a)first, we need to install ngxtop using command $ sudo pip install ngxtop
 b)Now we have installed ngxtop, the easiest way to run it is without any arguments. This will parse the /var/log/nginx/access.log and runs.
 sudo ngxtop - use this command to monitor real time access log
 once we execute command then it will write access log
 
-4. You were running a django application server & you stopped the executing process & next time you went to start the app server, you found out that the port is already in use. What steps you will take to analyze the issue & then start the django app server
-Answer : we need to use sudo fuser -k 8000/tcp. This should kill all the processes associated with port 8000.
+4.we need to use sudo fuser -k 8000/tcp. This should kill all the processes associated with port 8000.
 
 
-5. Your server went down & your developer found that a recent commit had a typo in the source code which had put the server down. Now you have to find the number of occurrences of that typo in the source code file without opening the file. Also, find the occurence of that typo with respect to line number of file.
-
-Answer : a)number of occurrences of that typo in the source code file without opening the file
+5.a)number of occurrences of that typo in the source code file without opening the file
 $grep -c "typo" sourcecode.txt
 
 b)occurence of that typo with respect to line number of file
 $ grep -n ""typo" sourcecode.txt
 
 
-7.You created a systemd service for running backend application program & you would like to check the logs of that service to know whether it failed & caused your application to stop.
-
-Answer : To check a service's status, use the systemctl status service-name command.
+7.To check a service's status, use the systemctl status service-name command.
 $ sudo systemctl status sshd
 
 To cgecj the log we have to use below command
@@ -37,11 +31,7 @@ journalctl -u service-name.service
 
 it will shoy you logs of that service
 
-
-
-
-9. Suppose you are working as a linux administrator in company and one of your production server which is running on aws and has linux OS is running out of space, as an linux administrator you have decided to attach another volume to the linux server. List down detailed steps and commands to solve this issue.
-Answer : we have to follow below steps :
+9.we have to follow below steps :
 
 Step 1: Head over to EC2 –> Volumes and create a new volume of your preferred size and type.
 
@@ -49,9 +39,7 @@ Step 2: Select the created volume, right-click and select the “attach volume�
 
 Step 3: Select the ec2 instance from the instance text box
 
-Step 4: Now, login to your ec2 instance and list the available disks using the following command.
-
-lsblk
+Step 4: Now, login to your ec2 instance and list the available disks using the following command. lsblk
 
 The above command will list the disk you attached to your instance.
 
@@ -82,8 +70,7 @@ To unmount the volume, use the unmount command as shown below..
 
 umount /dev/xvdf
 
-10. Suppose you are working as a Linux administrator in company and one of your client wants to install HTTP server with MySQL on Linux based system and also client wants whenever the server gets rebooted the service should be up automatically. List down the steps with required commands how will you achieve this.
-Answer : we have to follow below steps to install Http server on linux.
+10. we have to follow below steps to install Http server on linux.
 
 a)install http server
 # yum install httpd
