@@ -1,16 +1,10 @@
 # Nix-Commands
 Basic Nix command
 
-1. Your client chipkart has a tig trillion day sale & the server has got a sudden spike of requests, you need to analyze the load appearing on server before it reaches the max limit, so that you can analyze within how much time you can scale out your infrastructure.
-Find out the average load, server is taking here along with the free memory available.
-
-Answer : a)Check the load on your server using the uptime command
-
+1. a)Check the load on your server using the uptime command
 b)cat /proc/meminfo will show you free available memory in server
 
-2. During the nginx setup on the server, you have written your own custom config file, now you need to place this file in /etc/nginx/sites-available/ & /etc/nginx/sites-enabled/ directories. Also, after you move this config file in relevant directory(s), you also need to make sure that if you update your config file in /etc/nginx/sites-available/
-It should get auto updated in /etc/nginx/sites-enabled/ directory without the need to manually update it.
-Answer : Create a new file called nginxReloader.sh that will use inotify-tools to listen for filesystem events and then automatically reload Nginx.
+2.Create a new file called nginxReloader.sh that will use inotify-tools to listen for filesystem events and then automatically reload Nginx.
 
 we will use nginx -s reload command for auto updating file in /etc/nginx/sites-enabled/ directory
 
