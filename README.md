@@ -6,7 +6,7 @@ b)cat /proc/meminfo will show you free available memory in server
 
 2.Create a new file called nginxReloader.sh that will use inotify-tools to listen for filesystem events and then automatically reload Nginx.
 
-we will use nginx -s reload command for auto updating file in /etc/nginx/sites-enabled/ directory
+*we will use nginx -s reload command for auto updating file in /etc/nginx/sites-enabled/ directory*
 
 3.a)first, we need to install ngxtop using command $ sudo pip install ngxtop
 b)Now we have installed ngxtop, the easiest way to run it is without any arguments. This will parse the /var/log/nginx/access.log and runs.
