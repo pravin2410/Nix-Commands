@@ -6,7 +6,7 @@ b)cat /proc/meminfo will show you free available memory in server
 
 2.Create a new file called nginxReloader.sh that will use inotify-tools to listen for filesystem events and then automatically reload Nginx.
 
-*we will use nginx -s reload command for auto updating file in /etc/nginx/sites-enabled/ directory*
+we will use nginx -s reload command for auto updating file in /etc/nginx/sites-enabled/ directory
 
 3.a)first, we need to install ngxtop using command $ sudo pip install ngxtop
 b)Now we have installed ngxtop, the easiest way to run it is without any arguments. This will parse the /var/log/nginx/access.log and runs.
@@ -73,10 +73,10 @@ umount /dev/xvdf
 10. we have to follow below steps to install Http server on linux.
 
 a)install http server
-# yum install httpd
+$ yum install httpd
 
 b)Create the directory where you will copy the full Oracle Linux Release 6 Media Pack DVD image, for example /var/www/html/OSimage/OL6.6:
-# mkdir -p /var/www/html/OSimage/OL6.6
+$ mkdir -p /var/www/html/OSimage/OL6.6
 
 c)Edit the HTTP server configuration file, /etc/httpd/conf/httpd.conf, as follows:
 
@@ -100,8 +100,8 @@ vi)Save your changes to the file.
 
 d)Start the Apache HTTP server, and configure it to start after a reboot.
 
-# service httpd start
-# chkconfig httpd on
+$ service httpd start
+$ chkconfig httpd on
 
 e)If you have enabled a firewall on your system, configure it to allow incoming HTTP connection requests on TCP port 80.
 
@@ -125,4 +125,4 @@ This command will install the latest version of MySQL
 iii)we can check whether MySQl is working right or not by entering below command
 mysql -u username -p
 
-it will be promoted to enter in the password
+it will be promoted to enter in the password. These are the steps which used for installation.
