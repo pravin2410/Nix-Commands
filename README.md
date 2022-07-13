@@ -8,10 +8,43 @@ b)cat /proc/meminfo will show you free available memory in server
 
 we will use nginx -s reload command for auto updating file in /etc/nginx/sites-enabled/ directory
 
-3.a)first, we need to install ngxtop using command $ sudo pip install ngxtop
-b)Now we have installed ngxtop, the easiest way to run it is without any arguments. This will parse the /var/log/nginx/access.log and runs.
-sudo ngxtop - use this command to monitor real time access log
-once we execute command then it will write access log
+3.a)we need to enable NGINX access and error log. To do that we have go to below path
+To do that, edit the Nginx configuration file and add the following access_log directive.
+server {
+...
+...
+        access_log /var/log/nginx/access_log combined;
+...
+...
+}
+for error.log :
+
+server {
+...
+...
+         error_log /var/log/nginx/error_log debug;
+...
+...
+}
+
+Once done with enabling access log and log level of error log to debug, restart Nginx and tail the log file to see them in real time.
+
+# systemctl restart nginx
+# tail -f /var/log/nginx/access_log
+# tail -f /var/log/nginx/error_log
+
+
+pravin@pravin-HP-Laptop-14q-cs0xxx:/var/log/nginx$ ls
+access.log  error.log
+pravin@pravin-HP-Laptop-14q-cs0xxx:/var/log/nginx$ cat access.log
+server {
+...
+...
+        access_log /var/log/nginx/access_log combined;
+...
+...
+}
+pravin@pravin-HP-Laptop-14q-cs0xxx:/var/log/nginx$
 
 4.we need to use sudo fuser -k 8000/tcp. This should kill all the processes associated with port 8000.
 
