@@ -39,19 +39,13 @@ Once done with enabling access log and log level of error log to debug, restart 
 
 
 5.a)number of occurrences of that typo in the source code file without opening the file
-pravin@pravin-HP-Laptop-14q-cs0xxx:~$ grep -o -i typo sourcecode.txt | wc -l
-12
-pravin@pravin-HP-Laptop-14q-cs0xxx:~$ 
+grep -o -i typo sourcecode.txt | wc -l
+
+
 
 b)occurence of that typo with respect to line number of file
 
-pravin@pravin-HP-Laptop-14q-cs0xxx:~$ grep -n 'typo' sourcecode.txt
-2:itypo typo typo i love united nation of .
-3:typo java is powerfule language typo
-4:typo tyop typo typo typo
-6:typo typo
-7:tpyo typo 
-pravin@pravin-HP-Laptop-14q-cs0xxx:~$
+ grep -n 'typo' sourcecode.txt
 
 7.To check a service's status, use the systemctl status service-name command.
 $ sudo systemctl status sshd
