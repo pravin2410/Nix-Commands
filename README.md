@@ -35,27 +35,23 @@ Once done with enabling access log and log level of error log to debug, restart 
 # tail -f /var/log/nginx/error_log
 
 
-pravin@pravin-HP-Laptop-14q-cs0xxx:/var/log/nginx$ ls
-access.log  error.log
-pravin@pravin-HP-Laptop-14q-cs0xxx:/var/log/nginx$ cat access.log
-#server {
-...
-...
-        access_log /var/log/nginx/access_log combined;
-...
-...
-}
-pravin@pravin-HP-Laptop-14q-cs0xxx:/var/log/nginx$
-
 4.we need to use sudo fuser -k 8000/tcp. This should kill all the processes associated with port 8000.
 
 
 5.a)number of occurrences of that typo in the source code file without opening the file
-$grep -c "typo" sourcecode.txt
+pravin@pravin-HP-Laptop-14q-cs0xxx:~$ grep -o -i typo sourcecode.txt | wc -l
+12
+pravin@pravin-HP-Laptop-14q-cs0xxx:~$ 
 
 b)occurence of that typo with respect to line number of file
-$ grep -n ""typo" sourcecode.txt
 
+pravin@pravin-HP-Laptop-14q-cs0xxx:~$ grep -n 'typo' sourcecode.txt
+2:itypo typo typo i love united nation of .
+3:typo java is powerfule language typo
+4:typo tyop typo typo typo
+6:typo typo
+7:tpyo typo 
+pravin@pravin-HP-Laptop-14q-cs0xxx:~$
 
 7.To check a service's status, use the systemctl status service-name command.
 $ sudo systemctl status sshd
