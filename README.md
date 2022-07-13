@@ -17,7 +17,8 @@ server {
 ...
 ...
 }
-for error.log :
+
+Error.log :
 
 server {
 ...
@@ -37,7 +38,7 @@ Once done with enabling access log and log level of error log to debug, restart 
 pravin@pravin-HP-Laptop-14q-cs0xxx:/var/log/nginx$ ls
 access.log  error.log
 pravin@pravin-HP-Laptop-14q-cs0xxx:/var/log/nginx$ cat access.log
-server {
+#server {
 ...
 ...
         access_log /var/log/nginx/access_log combined;
