@@ -1,0 +1,19 @@
+#hidden files in directory
+ls -a  command will show hidden files with dot before their names
+
+ls -A command wil show hidden files but without dot files
+
+#create symbolic link of file C to file A
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ ln -s A C
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ ls -lrt
+total 0
+-rw-rw-r-- 1 pravin pravin 0 Jul 19 11:08 A
+lrwxrwxrwx 1 pravin pravin 1 Jul 19 11:10 C -> A
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ vi C
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ 
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ 
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ cat A
+I love India
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$
+
+
