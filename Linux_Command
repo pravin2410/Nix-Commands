@@ -17,3 +17,86 @@ I love India
 pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$
 
 
+#create a hard link file CD of file AB
+
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ ln AB CD
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ ls -lrt
+total 12
+lrwxrwxrwx 1 pravin pravin  1 Jul 19 11:21 C -> A
+-rw-rw-r-- 1 pravin pravin 27 Jul 19 11:21 A
+-rw-rw-r-- 2 pravin pravin 58 Jul 19 11:24 CD
+-rw-rw-r-- 2 pravin pravin 58 Jul 19 11:24 AB
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ cat CD
+ python java ubuntu SQL PLSQL devloper
+moogsoft snow JIRA
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ A
+
+
+
+##
+
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ ls -lrt
+total 4
+lrwxrwxrwx 1 pravin pravin  1 Jul 19 11:21 C -> A
+-rw-rw-r-- 1 pravin pravin 27 Jul 19 11:21 A
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ ln AB CD
+ln: failed to access 'AB': No such file or directory
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ vi AB
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ ls -lrt
+total 8
+lrwxrwxrwx 1 pravin pravin  1 Jul 19 11:21 C -> A
+-rw-rw-r-- 1 pravin pravin 27 Jul 19 11:21 A
+-rw-rw-r-- 1 pravin pravin 58 Jul 19 11:24 AB
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ ln AB CD
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ ls -lrt
+total 12
+lrwxrwxrwx 1 pravin pravin  1 Jul 19 11:21 C -> A
+-rw-rw-r-- 1 pravin pravin 27 Jul 19 11:21 A
+-rw-rw-r-- 2 pravin pravin 58 Jul 19 11:24 CD
+-rw-rw-r-- 2 pravin pravin 58 Jul 19 11:24 AB
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ cat CD
+ python java ubuntu SQL PLSQL devloper
+moogsoft snow JIRA
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ 
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ 
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ ls -lrt
+total 12
+lrwxrwxrwx 1 pravin pravin  1 Jul 19 11:21 C -> A
+-rw-rw-r-- 1 pravin pravin 27 Jul 19 11:21 A
+-rw-rw-r-- 2 pravin pravin 58 Jul 19 11:24 CD
+-rw-rw-r-- 2 pravin pravin 58 Jul 19 11:24 AB
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ cat A
+C ubuntu 20.4
+I love India
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ vi A
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ ln -s D C
+ln: failed to create symbolic link 'C': File exists
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ ln -s C D
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ ls -lrt
+total 12
+lrwxrwxrwx 1 pravin pravin  1 Jul 19 11:21 C -> A
+-rw-rw-r-- 2 pravin pravin 58 Jul 19 11:24 CD
+-rw-rw-r-- 2 pravin pravin 58 Jul 19 11:24 AB
+-rw-rw-r-- 1 pravin pravin 71 Jul 19 11:38 A
+lrwxrwxrwx 1 pravin pravin  1 Jul 19 11:39 D -> C
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ cat D
+C ubuntu 20.
+punks dkfogkgvvcc,
+cricket football ubuntu 4
+I love India
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ rm A
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ ls -lrt
+total 8
+lrwxrwxrwx 1 pravin pravin  1 Jul 19 11:21 C -> A
+-rw-rw-r-- 2 pravin pravin 58 Jul 19 11:24 CD
+-rw-rw-r-- 2 pravin pravin 58 Jul 19 11:24 AB
+lrwxrwxrwx 1 pravin pravin  1 Jul 19 11:39 D -> C
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ cat D
+cat: D: No such file or directory
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ 
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ cat C
+cat: C: No such file or directory
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ cat AB
+ python java ubuntu SQL PLSQL devloper
+moogsoft snow JIRA
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ 
