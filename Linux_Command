@@ -1,4 +1,4 @@
-#hidden files in directory
+# hidden files in directory
 ls -a  command will show hidden files with dot before their names
 
 ls -A command wil show hidden files but without dot files
@@ -17,7 +17,7 @@ I love India
 pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$
 
 
-#create a hard link file CD of file AB
+# create a hard link file CD of file AB
 
 pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ ln AB CD
 pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ ls -lrt
