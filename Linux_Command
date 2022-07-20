@@ -1,4 +1,4 @@
-# hidden files in directory
+<1> hidden files in directory
 ls -a  command will show hidden files with dot before their names
 
 ls -A command wil show hidden files but without dot files
@@ -17,7 +17,7 @@ I love India
 pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$
 
 
-# create a hard link file CD of file AB
+<2> create a hard link file CD of file AB
 
 pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ ln AB CD
 pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ ls -lrt
@@ -32,8 +32,7 @@ moogsoft snow JIRA
 pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ A
 
 
-
-##
+<3>
 
 pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ ls -lrt
 total 4
@@ -100,3 +99,24 @@ pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ cat AB
  python java ubuntu SQL PLSQL devloper
 moogsoft snow JIRA
 pravin@pravin-HP-Laptop-14q-cs0xxx:~/CommandNotes$ 
+
+
+<4>Create hierarchy directory structure 
+
+pravin@pravin-HP-Laptop-14q-cs0xxx:~$ mkdir p1
+pravin@pravin-HP-Laptop-14q-cs0xxx:~$ cd p1
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/p1$ mkdir p2
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/p1$ mkdir p6
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/p1$ ls
+p2  p6
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/p1$ cd p2
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/p1/p2$ mkdir p4
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/p1/p2$ mkdir p5
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/p1/p2$ cd .
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/p1/p2$ cd ..
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/p1$ ls
+p2  p6
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/p1$ cd p6
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/p1/p6$ mkdir p7
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/p1/p6$ cd
+pravin@pravin-HP-Laptop-14q-cs0xxx:~$ tree
