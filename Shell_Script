@@ -1,0 +1,44 @@
+#how to send notificaton when service stopped
+-->
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/scripts$ cat SendNotification.sh 
+
+#!/bin/bash
+
+flag_file="/home/pravin/p1/flagfile"
+service="/home/pravin/scripts/Names.sh"
+
+while [ ! -f "${flag_file}" ]
+do
+
+if ps -ef | grep "[N]ames.sh"; then
+
+         echo "Service is running"
+else
+           touch "$flag_file"
+           echo "Sending notifcation"
+         echo "My Process has stopped" | mail -s pravin.pawar010@gmail.com
+fi
+sleep 5
+done
+rm flag_file
+
+#if any service is failed then it should self healf and keep running
+#pravin@pravin-HP-Laptop-14q-cs0xxx:~/scripts$ cat Monitorservice.sh 
+#!/bin/bash
+
+s_service=httpd
+service_status=stopped
+
+service $s_service status | grep -i 'running\|stopped' | awk '{print $3}' | while read output;
+do
+echo $output
+
+if ["$output" == "$service_status" ]; then
+
+service $s_service start
+       echo "$s_service service is up now.!!" | mail -s "$s_service is down and restarted now on $(hostname)" pravin.pawar010@gmail.com
+else
+     echo " $s_service service is running"
+fi
+done 
+pravin@pravin-HP-Laptop-14q-cs0xxx:~/scripts$ 
